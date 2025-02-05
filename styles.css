@@ -1,3 +1,11 @@
+:root {
+  --primary_color: #d8f5a2;
+  --accent_color: #303336;
+  --background_color: white;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +15,57 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Noto Sans", sans-serif;
+  color: var(--accent_color)
 }
+
+hr {
+  background-color: var(--accent_color);
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*Reusable Elements/
+/*----------*/
+.bottom_spacer {
+  margin-bottom: 32px;
+}
+
+.large_bottom_spacer {
+  margin-bottom: 64px;
+}
+
+.section_title {
+  /* text-align: center; */
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.project_img {
+  width: 40%;
+  height: 40%;
+  border-radius: 5px;
+}
+
+.project_card {
+  display: flex;
+  gap: 24px;
+}
+
+.project_text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  width: fit-content;
+}
+
+@container (max-width: 520px) {
+  .project_text {
+    width: 0.5vh;
+  }
+}
+/*----------*/
+
+
 
 /*navbar contents*/
 .nav_bar {
@@ -16,18 +74,19 @@ body {
   align-items: center;
   padding: 16px 32px;
   font-size: 24px;
-  background-color: #dbe4ff;
+  background-color: var(--primary_color);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0px 1px var(--accent_color);
 }
 
 .nav_name {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 32px;
-  color: #495057
+  color: var(--accent_color);
 }
 
 .nav_links_sect {
@@ -56,20 +115,20 @@ body {
 }
 
 .nav_links_sect a:link{
-  color: #495057;
+  color: var(--accent_color);
   text-decoration: none;
 }
 .nav_links_sect a:visited{
-  color: #495057;
+  color: var(--accent_color);
   text-decoration: none;
 }
 .nav_links_sect a:hover{
-  color: #495057;
+  color: var(--accent_color);
   text-decoration: none;
   animation: scaleUp 0.5s forwards;
 }
 .nav_links_sect a:active{
-  color: #495057;
+  color: var(--accent_color);
   text-decoration: none;
 }
 /*-----------------*/
@@ -113,37 +172,38 @@ body {
 }
 /*------------*/
 
+/*------------*/
+.page_content_sect {
+  margin-bottom: 100px;
+}
+
+
+/*------------*/
+
+
 /*about me*/
+
 .about_sect {
   margin: 0 auto;
   width: 90%;
-  color: #495057;
+  color: var(--accent_color);
 }
 
 .about_sect_content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
 }
-
-.about_me_title {
-  margin-top: 24px;
-  /* text-align: center; */
-  font-size: 48px;
-  font-weight: 600;
-}
-
-
-
 
 .bio_info {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
 .mc_logo_img {
   width: 100px;
   height: 100px;
-  margin-top: 24px;
   margin-left: -10px;
 }
 
@@ -153,42 +213,22 @@ body {
   line-height: 1.4;
 }
 
-
-
-
-.bio_links {
-  display: flex;
-  justify-content: center;
-}
-
-.bio_links_card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 128px;
-  border-radius: 10px;
-  box-shadow: 5px 5px;
-  background-color: #f1f3f5;
-}
-
 .author_img {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin-top: 24px;
+  object-fit: cover;
+  box-shadow: 6px 12px rgba(50, 50, 50);
+  padding-top: 12px;
 }
 
-.socials {
-  display: flex;
-  gap: 64px;
-  background-color: #dbe4ff;
-  padding: 24px;
-  border-radius: 0 0 10px 10px;
-}
+
+/*---icons---*/
 
 .social_icon {
-  width: 100px;
-  height: 100px;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
 }
 
 /*--------*/
@@ -196,40 +236,32 @@ body {
 
 /*projects section*/
 .projects_section {
-  margin-top: 64px;
-  font-size: 24px;
-  background-color: #dbe4ff;
+  margin: 0 auto;
+  width: 90%;
+  /* background-color: var(--primary_color); */
 }
 
-.projects_title {
-  font-size: 48px;
-  color:#495057;
-  font-weight: 600;
-  text-align: center;
-  background-color: white;
-  padding-bottom: 64px;
-}
-
-.projects_examples {
-  display: flex;
-  flex-direction: column;
-}
-
-.definition_finder_sect, .rmse_sect, .pkmn_database_sect{
+/*--Favorite Projects--*/
+.favorite_project1 {
   display: flex;
 }
 
-.project_img_div {
-  height:600px;
+.favorite_project2 {
+  display: flex;
+  justify-content: end;
 }
 
-.project_img {
-  width: 1000px;
-  height: 600px;
+.favorite_project3 {
+  display: flex;
 }
 
-.project_desc {
-  padding: 12px 24px;
-}
+
+/*--All Projects--*/
+
+
 /*----------------*/
 
+
+.footer {
+  margin-bottom: 48px;
+}
