@@ -114,20 +114,20 @@ hr {
   transform-origin: center;
 }
 
-.nav_links_sect a:link{
+a:link{
   color: var(--accent_color);
   text-decoration: none;
 }
-.nav_links_sect a:visited{
+a:visited{
   color: var(--accent_color);
   text-decoration: none;
 }
-.nav_links_sect a:hover{
+a:hover{
   color: var(--accent_color);
   text-decoration: none;
   animation: scaleUp 0.5s forwards;
 }
-.nav_links_sect a:active{
+a:active{
   color: var(--accent_color);
   text-decoration: none;
 }
