@@ -21,7 +21,7 @@ body {
 hr {
   background-color: var(--accent_color);
   width: 90%;
-  margin: 0 auto;
+  margin-right: auto;
 }
 
 /*Reusable Elements/
@@ -58,9 +58,56 @@ hr {
   width: fit-content;
 }
 
+.sliding_from_left {
+  animation: slide-from-left 2.5s forwards;
+  opacity: 1;
+}
+
+.sliding_from_right {
+  animation: slide-from-right 2.5s forwards;
+  opacity: 1;
+}
+
 @container (max-width: 520px) {
   .project_text {
     width: 0.5vh;
+  }
+}
+
+.language_icon {
+  height: 128px;
+  width: 128px;
+}
+
+.smaller_language_icon {
+  height: 96px;
+  width: 96px;
+}
+
+.wide_project_img {
+  width: 40%;
+  height: 25%;
+}
+
+@keyframes slide-from-left{
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
 /*----------*/
@@ -86,11 +133,13 @@ hr {
 .nav_name {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 32px;
+  font-weight: 500;
   color: var(--accent_color);
 }
 
 .nav_links_sect {
   font-family: "Noto Sans", sans-serif;
+  font-size: 32px;
   display: flex;
   gap: 18px;
   font-weight: 500;
@@ -115,21 +164,30 @@ hr {
 }
 
 a:link{
+  align-items: center;
   color: var(--accent_color);
   text-decoration: none;
 }
 a:visited{
+  align-items: center;
   color: var(--accent_color);
   text-decoration: none;
 }
 a:hover{
+  align-items: center;
   color: var(--accent_color);
   text-decoration: none;
   animation: scaleUp 0.5s forwards;
 }
 a:active{
+  align-items: center;
   color: var(--accent_color);
   text-decoration: none;
+}
+
+.nav_links_sect a {
+  display: flex;
+  align-items: center;
 }
 /*-----------------*/
 
@@ -242,6 +300,12 @@ a:active{
 }
 
 /*--Favorite Projects--*/
+.favorite_project1, 
+.favorite_project2, 
+.favorite_project3 {
+  opacity: 0;
+}
+
 .favorite_project1 {
   display: flex;
 }
@@ -256,7 +320,7 @@ a:active{
 }
 
 
-/*--All Projects--*/
+/*--More Projects--*/
 
 
 /*----------------*/
