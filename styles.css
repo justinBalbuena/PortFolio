@@ -84,6 +84,11 @@ hr {
   width: 96px;
 }
 
+.very_small_language_icon {
+  height: 64px;
+  width: 64px;
+}
+
 .wide_project_img {
   width: 40%;
   height: 25%;
@@ -300,6 +305,13 @@ a:active{
 }
 
 /*--Favorite Projects--*/
+.fav_projects_header {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 16px;
+}
+
 .favorite_project1, 
 .favorite_project2, 
 .favorite_project3 {
